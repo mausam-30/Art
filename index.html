@@ -1,0 +1,916 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Mausam Art - Charcoal & Pencil Sketch Artist Portfolio"
+        />
+        <title>Mausam Art | Charcoal & Pencil Artist</title>
+
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Parisienne&family=Tangerine:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Font Awesome for Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Header with Artist Name and Menu Button -->
+        <header class="header" id="header">
+            <div class="header-content">
+                <h1 class="artist-name">Mausam Art ♡✏</h1>
+                <button
+                    class="hamburger-btn"
+                    id="hamburgerBtn"
+                    aria-label="Open menu"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Dark Mode Toggle (Floating) -->
+        <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle dark mode"
+        >
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <!-- Sidebar Overlay -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- Right Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <button
+                class="sidebar-close"
+                id="sidebarClose"
+                aria-label="Close sidebar"
+            >
+                <i class="fas fa-times"></i>
+            </button>
+
+            <nav class="sidebar-nav">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#hero" class="nav-link">Home</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#about" class="nav-link">About Me</a></li>
+                    <li><a href="#contact" class="nav-link">Contact Me</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-contact">
+                <h3>Contact</h3>
+                <a href="mailto:mausam@example.com" class="email-link">
+                    <i class="fas fa-envelope"></i> mausam@example.com
+                </a>
+            </div>
+
+            <div class="sidebar-social">
+                <h3>Follow Me</h3>
+                <div class="social-links">
+                    <a
+                        href="https://www.instagram.com/mausam_30?igsh=MXFrazJrb3ljc2s4Yg=="
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Instagram"
+                    >
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a
+                        href="https://x.com/Mausam436"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Twitter"
+                    >
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a
+                        href="https://www.facebook.com/share/189fqbmL14/"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Facebook"
+                    >
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a
+                        href="https://pinterest.com"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Pinterest"
+                    >
+                        <i class="fab fa-pinterest"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-filters">
+                <h3>Filter by Year</h3>
+                <ul class="year-filters" id="yearFilters">
+                    <li>
+                        <button class="year-filter active" data-year="all">
+                            All Years
+                        </button>
+                    </li>
+                    <li>
+                        <button class="year-filter" data-year="2026">
+                            2026
+                        </button>
+                    </li>
+                    <li>
+                        <button class="year-filter" data-year="2025">
+                            2025
+                        </button>
+                    </li>
+                    <li>
+                        <button class="year-filter" data-year="2024">
+                            2024
+                        </button>
+                    </li>
+                    <li>
+                        <button class="year-filter" data-year="2023">
+                            2023
+                        </button>
+                    </li>
+                    <li>
+                        <button class="year-filter" data-year="2022">
+                            2022
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Carousel Section -->
+            <section class="hero" id="hero">
+                <div class="carousel-container">
+                    <div class="carousel" id="carousel">
+                        <!-- Slide 1: Final Artwork -->
+                        <div class="carousel-slide active">
+                            <div class="slide-image">
+                                <img
+                                    src="https://drive.google.com/thumbnail?id=1GcO_KXy8iYmoP-HcO7AkCV-oIBD-12PB&sz=w1600"
+                                    alt="Portrait of Walter White"
+                                    loading="eager"
+                                />
+                            </div>
+                            <div class="slide-caption">
+                                <h2 class="slide-title"></h2>
+                                <div class="slide-meta">
+                                    <span class="slide-date"
+                                        ><i class="fas fa-calendar"></i> January
+                                        26, 2026</span
+                                    >
+                                    <span class="slide-hours"
+                                        ><i class="fas fa-clock"></i> 5
+                                        hours</span
+                                    >
+                                </div>
+                                <p class="slide-teaser">
+                                    A graphite and charcoal portrait sketch of
+                                    Walter White.
+                                </p>
+                                <button class="view-more-btn" data-slide="0">
+                                    View More
+                                </button>
+                                <div class="slide-description">
+                                    <p>
+                                        This is a portrait sketch of Walter
+                                        White also known as Heisenberg from
+                                        Breaking Bad series drawn using graphite
+                                        and charcoal pencils. The sketch focuses
+                                        on basic facial structure, shading, and
+                                        contrast. It was made as a practice
+                                        study to improve realism and control
+                                        while working with mixed pencil mediums.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: Outline Stage -->
+                        <div class="carousel-slide">
+                            <div class="slide-image">
+                                <img
+                                    src="https://drive.google.com/thumbnail?id=1_GYLyEP0pPoKRRLYu6SfAzVTJyeKSuou&sz=w2000"
+                                    alt="Outline Stage - Work in Progress"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="slide-caption">
+                                <h2 class="slide-title">The Foundation</h2>
+                                <div class="slide-meta">
+                                    <span class="slide-date"
+                                        ><i class="fas fa-calendar"></i> Stage
+                                        1</span
+                                    >
+                                    <span class="slide-hours"
+                                        ><i class="fas fa-clock"></i> 40 min
+                                        I guess</span
+                                    >
+                                </div>
+                                <p class="slide-teaser">
+                                    Initial sketch establishing proportions and
+                                    composition.
+                                </p>
+                                <button class="view-more-btn" data-slide="1">
+                                    View More
+                                </button>
+                                <div class="slide-description">
+                                    <p>
+                                        Every masterpiece begins with careful
+                                        planning. This initial outline phase
+                                        focuses on getting the proportions
+                                        exactly right, mapping out the key
+                                        features, and establishing the overall
+                                        composition. Using light pencil strokes.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: Mid-Process -->
+                        <div class="carousel-slide">
+                            <div class="slide-image">
+                                <img
+                                    src="https://drive.google.com/thumbnail?id=1xX6lsCUYUsFDtWXGjydwa-8wBv9-u4YB&sz=w1600"
+                                    alt="Mid-Process Stage"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="slide-caption">
+                                <h2 class="slide-title">Building Depth</h2>
+                                <div class="slide-meta">
+                                    <span class="slide-date"
+                                        ><i class="fas fa-calendar"></i> Stage
+                                        2</span
+                                    >
+                                    <span class="slide-hours"
+                                        ><i class="fas fa-clock"></i> idk</span
+                                    >
+                                </div>
+                                <p class="slide-teaser">
+                                    Layering tones and developing the
+                                    dimensional quality.
+                                </p>
+                                <button class="view-more-btn" data-slide="2">
+                                    View More
+                                </button>
+                                <div class="slide-description">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4: Near Completion -->
+                        <div class="carousel-slide">
+                            <div class="slide-image">
+                                <img
+                                    src="https://drive.google.com/thumbnail?id=1F_ys3bJxdpJCM9guwMIbxGt1N0A1RhTq&sz=w1600"
+                                    alt="Near Final Stage"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="slide-caption">
+                                <h2 class="slide-title">Refining Details</h2>
+                                <div class="slide-meta">
+                                    <span class="slide-date"
+                                        ><i class="fas fa-calendar"></i> Stage
+                                        3</span
+                                    >
+                                    <span class="slide-hours"
+                                        ><i class="fas fa-clock"></i> idk</span
+                                    >
+                                </div>
+                                <p class="slide-teaser">
+                                    Final refinements bringing the portrait to
+                                    life.
+                                </p>
+                                <button class="view-more-btn" data-slide="3">
+                                    View More
+                                </button>
+                                <div class="slide-description">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Controls -->
+                    <button
+                        class="carousel-btn prev-btn"
+                        id="prevBtn"
+                        aria-label="Previous slide"
+                    >
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button
+                        class="carousel-btn next-btn"
+                        id="nextBtn"
+                        aria-label="Next slide"
+                    >
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                    <!-- Carousel Dots -->
+                    <div class="carousel-dots" id="carouselDots">
+                        <button
+                            class="dot active"
+                            data-slide="0"
+                            aria-label="Go to slide 1"
+                        ></button>
+                        <button
+                            class="dot"
+                            data-slide="1"
+                            aria-label="Go to slide 2"
+                        ></button>
+                        <button
+                            class="dot"
+                            data-slide="2"
+                            aria-label="Go to slide 3"
+                        ></button>
+                        <button
+                            class="dot"
+                            data-slide="3"
+                            aria-label="Go to slide 4"
+                        ></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery Section -->
+            <section class="gallery-section" id="gallery">
+                <div class="container">
+                    <div class="section-header animate-on-scroll">
+                        <h2 class="section-title">Portfolio</h2>
+                        <p class="section-subtitle">
+                            Explore my collection of charcoal and pencil
+                            artworks
+                        </p>
+                        <p class="section-subtitle">
+                            (Only portraits created in 2026 are shown here.)
+                        </p>
+                    </div>
+
+                    <!-- Gallery Controls -->
+                    <div class="gallery-controls animate-on-scroll">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input
+                                type="text"
+                                id="searchInput"
+                                placeholder="Search artworks..."
+                                aria-label="Search artworks"
+                            />
+                        </div>
+                        <div class="sort-box">
+                            <label for="sortSelect">Sort by:</label>
+                            <select id="sortSelect" aria-label="Sort artworks">
+                                <option value="newest">Newest First</option>
+                                <option value="oldest">Oldest First</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Grid -->
+                    <div class="gallery-grid" id="galleryGrid">
+                        <!-- Artwork 1 -->
+                        <article
+                            class="gallery-card animate-on-scroll"
+                            data-year="2026"
+                            data-date="2026-02-04"
+                        >
+                            <div class="card-image">
+                                <img
+                                    src="https://drive.google.com/thumbnail?id=16xVGdWfiO4iYf-L1YlcUwlNt2RM-oazb&sz=w1600"
+                                    alt="Portrait sketch of my friend ♡"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Ethereal Beauty</h3>
+                                <div class="slide-meta">
+                                    <span class="card-year"
+                                        >February 04, 2026</span
+                                    >
+                                    <span class="slide-hours"
+                                        ><i class="fas fa-clock"></i>3.5
+                                        hours</span
+                                    >
+                                </div>
+                                <div class="card-meta">
+                                    <span class="card-medium"
+                                        >Graphite Pencil (HB - 8B), Soft
+                                        Charcoal</span
+                                    >
+                                </div>
+                                <p class="card-teaser"></p>
+                            </div>
+                        </article>
+
+                        <!-- Artwork 2 -->
+                        <article
+                            class="gallery-card animate-on-scroll"
+                            data-year="2026"
+                            data-date="2026-02-05"
+                        >
+                            <div class="card-image">
+                                <img
+                                    src="https://drive.google.com/thumbnail?id=1oPTBQxRA56AXE0303qCC3_rc8y9KAf76&sz=w1600"
+                                    alt="Portrait sketch of my friend ♡"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title"><!--Shadows and Light--></h3>
+                                <div class="slide-meta">
+                                    <span class="card-year"
+                                        >February 05, 2026</span
+                                    >
+                                    <span class="slide-hours"
+                                        ><i class="fas fa-clock"></i> 4
+                                        hours</span
+                                    >
+                                </div>
+                                <div class="card-meta">
+                                    <span class="card-medium"
+                                        >Graphite Pencil (HB - 8B), Soft
+                                        Charcoal
+                                    </span>
+                                </div>
+                                <p class="card-teaser"><!--
+                                    An exploration of dramatic contrast and
+                                    atmospheric depth.-->
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Artwork 3 -->
+                        <article
+                            class="gallery-card animate-on-scroll"
+                            data-year="2026"
+                            data-date="2026-02-03"
+                        >
+                            <div class="card-image">
+                                <img
+                                    src="https://drive.google.com/thumbnail?id=1BWd261ZoWzdhgIV1UXMYZVQIu4BFch4K&sz=w1600"
+                                    alt="Portrait sketch of my friend ♡"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title"></h3>
+                                <div class="slide-meta">
+                                    <span class="card-year"
+                                        >February 03, 2026</span
+                                    >
+                                    <span class="slide-hours"
+                                        ><i class="fas fa-clock"></i> 3
+                                        hours</span
+                                    >
+                                </div>
+
+                                <div class="card-meta">
+                                    <span class="card-medium"
+                                        >Graphite Pencil (HB - 8B), Soft
+                                        Charcoal
+                                    </span>
+                                </div>
+                                <p class="card-teaser"></p>
+                            </div>
+                        </article>
+
+                        <!-- Artwork 4 -->
+                        <article
+                            class="gallery-card animate-on-scroll"
+                            data-year="2026"
+                            data-date="2026-02-04"
+                        >
+                            <div class="card-image">
+                                <img
+                                    src="https://drive.google.com/thumbnail?id=1AzLr9DYXYOokz9Xf7wyt2m9R_Gi3nMlz&sz=w1600"
+                                    alt="Lily flower drawing ♡"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Lilyyy</h3>
+                                <div class="slide-meta">
+                                    <span class="card-year">
+                                        February 04, 2026</span
+                                    >
+                                    <span class="slide-hours"
+                                        ><i class="fas fa-clock"></i>2
+                                        hours</span
+                                    >
+                                </div>
+                                <div class="card-meta">
+                                    <span class="card-medium"
+                                        >Graphite & Charcoal Pencils</span
+                                    >
+                                </div>
+                                <p class="card-teaser"></p>
+                            </div>
+                        </article>
+
+                        <!-- Artwork 5 -->
+                        <article
+                            class="gallery-card animate-on-scroll"
+                            data-year="2026"
+                            data-date="2026-02-01"
+                        >
+                            <div class="card-image">
+                                <img
+                                    src="https://drive.google.com/thumbnail?id=1n9qs4fCKlFQf_FdTEvzaNhLbQVqqhnvT&sz=w1600"
+                                    alt="Portrait sketch of my friend ♡"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title"></h3>
+                                <div class="slide-meta">
+                                    <span class="card-year"
+                                        >February 01, 2026</span
+                                    >
+                                    <span class="slide-hours"
+                                        ><i class="fas fa-clock"></i>5
+                                        hours</span
+                                    >
+                                </div>
+                                <div class="card-meta">
+                                    <span class="card-medium"
+                                        >Graphite Pencils (HB - 8B), Soft
+                                        charcoalll</span
+                                    >
+                                </div>
+                                <p class="card-teaser"></p>
+                            </div>
+                        </article>
+
+                        <!-- Artwork 6 -->
+                        <article
+                            class="gallery-card animate-on-scroll"
+                            data-year="2026"
+                            data-date="2026-01-13"
+                        >
+                            <div class="card-image">
+                                <img
+                                    src="https://drive.google.com/thumbnail?id=1k80hAJN2jMElPLCjK1wbwQ8ixbw2uhvz&sz=w1600"
+                                    alt="Portrait sketch of my friend ♡"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title"></h3>
+                                <div class="slide-meta">
+                                    <span class="card-year"
+                                        >January 13, 2026</span
+                                    >
+                                    <span class="slide-hours"
+                                        ><i class="fas fa-clock"></i>3.5
+                                        hours</span
+                                    >
+                                </div>
+
+                                <div class="card-meta">
+                                    <span class="card-medium"
+                                        >Graphite Pencil (HB - 8B)</span
+                                    >
+                                </div>
+                                <p class="card-teaser"></p>
+                            </div>
+                        </article>
+
+                        <!-- Artwork 7 -->
+                        <article
+                            class="gallery-card animate-on-scroll"
+                            data-year="2026"
+                            data-date="2026-02-03"
+                        >
+                            <div class="card-image">
+                                <img
+                                    src="https://drive.google.com/thumbnail?id=1wmhT7ZyPgTd6DsZmLH4AhAVJdFbHglTc&sz=w1600"
+                                    alt="Portrait sketch of my friend ♡"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title"></h3>
+
+                                <div class="slide-meta">
+                                    <span class="card-year"
+                                        >F2026-02-03, 2026</span
+                                    >
+
+                                    <span class="slide-hours"
+                                        ><i class="fas fa-clock"></i> 5.5
+                                        hours</span
+                                    >
+                                </div>
+                                <div class="card-meta">
+                                    <span class="card-medium"
+                                        >Graphite Pencil (HB - 8B), Soft
+                                        Charcoal
+                                    </span>
+                                </div>
+                                <p class="card-teaser"></p>
+                            </div>
+                        </article>
+
+                        <!-- Artwork 8 -->
+                        <article
+                            class="gallery-card animate-on-scroll"
+                            data-year="2026"
+                            data-date="2026-01-07"
+                        >
+                            <div class="card-image">
+                                <img
+                                    src="https://drive.google.com/thumbnail?id=1Zqkms1zoeMaSFhqlQcOSbWA4UoaGMzrG&sz=w1600"
+                                    alt="Portrait sketch of my friend ♡"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title"></h3>
+                                <div class="slide-meta">
+                                    <span class="card-year"
+                                        >January 07, 2026</span
+                                    >
+                                    <span class="slide-hours"
+                                        ><i class="fas fa-clock"></i>5
+                                        hours</span
+                                    >
+                                </div>
+                                <div class="card-meta">
+                                    <span class="card-medium"
+                                        >Graphite Pencils (HB - 8B)</span
+                                    >
+                                </div>
+                                <p class="card-teaser">
+                                    Capturing the hope and wonder in young eyes.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- No Results Message -->
+                    <div
+                        class="no-results"
+                        id="noResults"
+                        style="display: none"
+                    >
+                        <i class="fas fa-search"></i>
+                        <p>No artworks found matching your criteria.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="about-section" id="about">
+                <div class="container">
+                    <div class="about-content animate-on-scroll">
+                        <div class="about-image">
+                            <img
+                                src="https://drive.google.com/thumbnail?id=19SeZ5B_NoGvg_OFQJqWXLOfnGtagmfbz&sz=w1600"
+                                alt="Mausam - Artist at Work"
+                                loading="lazy"
+                            />
+                        </div>
+                      <!--  <div class="about-image">
+                            <img
+                                src="https://drive.google.com/thumbnail?id=1LyQQ04hDM3GnBUgsU45DGPbj9S6Eum0t&sz=w2000"
+                                alt=" ♡ Opps"
+                                loading="lazy"
+                            />
+                        </div> -->
+                        <div class="about-text">
+                            <h2 class="section-title">About Me</h2>
+                            <p>
+                                Hi, I’m Mausam, a beginner charcoal and graphite
+                                artist from Nepal. I’ve loved drawing since I
+                                was a kid, but I’ve only recently started taking
+                                it more seriously.
+                            </p>
+
+                            <p>
+                                I’m still learning and improving with every
+                                sketch. This space is where I share my progress
+                                and growth as an artist.
+                            </p>
+                            <div class="about-stats">
+                                <div class="stat">
+                                    <span class="stat-number">Since Birth</span>
+                                    <span class="stat-label">Experience</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">50+</span>
+                                    <span class="stat-label"
+                                        >Artworks Created</span
+                                    >
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">1</span>
+                                    <span class="stat-label"
+                                        >Happy Client (friend) 🥳</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="contact-section" id="contact">
+                <div class="container">
+                    <div class="contact-content animate-on-scroll">
+                        <h2 class="section-title">Get In Touch</h2>
+                        <p class="section-subtitle">
+                            Interested in a commission or collaboration? I'd
+                            love to hear from you.
+                        </p>
+
+                        <div class="contact-options">
+                            <div class="contact-card">
+                                <i class="fas fa-envelope"></i>
+                                <h3>Email Me</h3>
+                                <a href="mailto:mausam@example.com"
+                                    >mausamc2001@gmail.com</a
+                                >
+                            </div>
+                            <div class="contact-card">
+                                <i class="fas fa-phone"></i>
+                                <h3>Call Me</h3>
+                                <a href="tel:+977123456789">+977 blah Blah Blah</a>
+                            </div>
+                            <div class="contact-card">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h3>Location</h3>
+                                <p>Dharan, Nepal</p>
+                            </div>
+                        </div>
+                        <p>This doesn't actually work Hehe</p>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    name="subject"
+                                    required
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="6"
+                                    required
+                                ></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                Send Message
+                            </button>
+                        </form>
+
+                        <div
+                            class="form-message"
+                            id="formMessage"
+                            style="display: none"
+                        ></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+                <p>
+                    ️⚠ This is a temporary demo website to showcase my artworks. Some features will not work. I’m updating it and uploading artworks until the final version, after which this site will be taken down.
+                </p>
+                <br>
+            <div class="container">
+                <p>&copy; 2026 Mausam Art. All rights reserved.</p>
+                <div class="footer-social">
+                    <a
+                        href="https://www.instagram.com/mausam_30?igsh=MXFrazJrb3ljc2s4Yg=="
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Instagram"
+                    >
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a
+                        href="https://x.com/Mausam436"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Twitter"
+                    >
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a
+                        href="https://www.facebook.com/share/189fqbmL14/"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Facebook"
+                    >
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Modal/Lightbox -->
+        <div class="modal" id="modal">
+            <button
+                class="modal-close"
+                id="modalClose"
+                aria-label="Close modal"
+            >
+                <i class="fas fa-times"></i>
+            </button>
+            <button
+                class="modal-nav modal-prev"
+                id="modalPrev"
+                aria-label="Previous image"
+            >
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button
+                class="modal-nav modal-next"
+                id="modalNext"
+                aria-label="Next image"
+            >
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="modal-content">
+                <img src="" alt="" id="modalImage" />
+                <div class="modal-info">
+                    <h3 id="modalTitle"></h3>
+                    <div class="modal-meta">
+                        <span id="modalYear"></span>
+                        <span id="modalMedium"></span>
+                    </div>
+                    <p id="modalDescription"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <button class="back-to-top" id="backToTop" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <!-- JavaScript -->
+        <script src="script.js"></script>
+    </body>
+</html>
